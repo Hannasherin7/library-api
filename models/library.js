@@ -1,9 +1,9 @@
 const mongoose=require("mongoose")
 const schema=mongoose.Schema({
-    "bookname":String,
-    "title":String,
-    "auther":String,
-    "price":String
+    "bookname":{type:String,required:true},
+    "title":{type:String,required:true},
+    "auther":{type:String,required:true},
+    "price":{type:String,required:true}
 })
-let librariesmodel=mongoose.model("libraries",schema);
-module.exports={librariesmodel}
+let librarymodel=mongoose.model("libraries",schema);
+module.exports={librarymodel}
